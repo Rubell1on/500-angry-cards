@@ -1,0 +1,40 @@
+.custom-button {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+}
+
+.size_sm {
+    padding: 0px 10px;
+    min-width: 30px;
+}
+
+.size_md {
+    padding: 7px 12px;
+}
+
+.color_white {
+    color: white;
+}
+
+.background_red {
+    background: red;
+}
+
+.background_green {
+    background: #7ac17a;
+}
+
+.pos_right {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.pos_left {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}

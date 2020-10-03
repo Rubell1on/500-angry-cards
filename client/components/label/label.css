@@ -1,0 +1,10 @@
+.label {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+@media (min-width: 1000px) {
+    .label {
+        font-size: 24px;
+    }
+}

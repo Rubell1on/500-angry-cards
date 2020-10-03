@@ -1,0 +1,29 @@
+.players__list {
+    margin-bottom: 10px;
+}
+
+.players__list > div {
+    margin-bottom: 5px;
+}
+
+.players__empty {
+    font-size: 18px;
+}
+
+.player-form {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.player-form__username {
+    width: calc(100% - 30px);
+}
+
+.player-form__submit {
+    height: 30px;
+    width: 30px;
+}
+
+.players__finish {
+    margin: 0 auto;
+}

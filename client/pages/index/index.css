@@ -1,0 +1,59 @@
+.index__logo {
+    margin-bottom: 5px;
+}
+
+.logo__number {
+    font-size: 180px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 130px;
+}
+
+.logo__text {
+    font-weight: bold;
+    text-align: center;
+    font-size: 44px;
+}
+
+.logo__info {
+    background: red;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.index__start-button {
+    background: #7ac17a;
+    width: min-content;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+@media (min-width: 1000px) {
+    .logo__number {
+        font-size: 180px;
+        line-height: 130px;
+    }
+
+    .logo__text {
+        font-size: 44px;
+    }
+
+    .logo__info {
+        font-size: 20px;
+    }
+
+    .index__start-button {
+        font-size: 25px;
+    }
+}

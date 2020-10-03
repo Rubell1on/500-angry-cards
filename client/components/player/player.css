@@ -1,0 +1,12 @@
+.player {
+    display: flex;
+    height: 40px;
+    padding: 5px;
+    background: #80808052;
+    border-radius: 5px;
+}
+
+.player__name {
+    width: calc(100% - 30px);
+    line-height: 30px;
+}
