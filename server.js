@@ -10,4 +10,4 @@ app.use(express.static(DIST_DIR))
 
 app.listen(PORT, () => console.log('Server started'));
 
-app.get(['/', '/players', '/words', '/final'], (req, res) => res.sendFile(INDEX_FILE_PATH));
+app.get(['/', '/players', '/words', '/final', '/winner'], (req, res) => res.sendFile(INDEX_FILE_PATH));

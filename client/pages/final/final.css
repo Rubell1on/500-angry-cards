@@ -1,0 +1,19 @@
+.player__name {
+    width: 70px; 
+    line-height: 30px;
+}
+
+.player__answer {
+    width: calc(100% - 100px);
+    line-height: 30px;
+}
+
+.player__score {
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background: red;
+    border-radius: 5px;
+    color: white;
+}

@@ -6,27 +6,58 @@ import Player from '../../components/player/player.jsx';
 import CustomButton from '../../components/custom-button/custom-button.jsx';
 import { useHistory } from 'react-router-dom';
 
+import './final.css';
+
 export default function Final() {
-    const [gameFinished, setGameState] = useState(false);
+    const [selected, setSelection] = useState(false);
+
     const playersString = localStorage.getItem('players');
     const answersString = localStorage.getItem('playerAnswers');
     const history = useHistory();
 
     if (playersString && answersString) {
         const tempPlayers = JSON.parse(playersString);
-        const tempAnswers = JSON.parse(answersString);
+        const tempAnswers = shuffle(JSON.parse(answersString));
 
         function handlePlayerClick(id) {
             const ind = playersList.findIndex(p => p.id === id);
             playersList[ind].score+=1;
+            if (playersList[ind].score > 10) {
+                history.push(`/winner/${id}`);
+            } else if (playersList[ind].score === 10) {
+                const tempStr = JSON.stringify(playersList);
+                localStorage.setItem('players', tempStr);
+                history.push(`/winner/${id}`);
+            }
             setPlayers([...playersList]);
-            setGameState(true);
+            setSelection(true);
         }
 
         function handleSubmit() {
             const tempStr = JSON.stringify(playersList);
             localStorage.setItem('players', tempStr);
             history.push('/words');
+        }
+
+        function shuffle(arr) {
+            if (Array.isArray(arr)) {
+                let oldArr = [...arr];
+                const temp = [];
+
+                for (let i = 0; oldArr.length; i++) {
+                    const ind = getRandomInt(oldArr.length);
+                    const removed = oldArr.splice(ind, 1);
+                    temp.push(...removed);
+                }
+
+                return temp;
+            } else {
+                return false;
+            }
+
+            function getRandomInt(max) {
+                return Math.floor(Math.random() * Math.floor(max));
+              }
         }
 
         const [playersList, setPlayers] = useState(tempPlayers);
@@ -43,10 +74,17 @@ export default function Final() {
                                     // customclass={checkText(p.id) ? 'player_background_green' : ''} 
                                     key={p.id} 
                                     userId={p.id} 
-                                    name={p.text} 
-                                    onClick={gameFinished ? () => {} : handlePlayerClick}
+                                    name={selected ? '' : p.text} 
+                                    onClick={selected ? () => {} : handlePlayerClick}
                                 >
-                                    {gameFinished ? <div className="player__score">{player.score}</div> : null}
+                                    {
+                                    selected 
+                                    ? <>
+                                        <div className="player__name">{player.name}</div>
+                                        <div className="player__answer">{p.text}</div>
+                                        <div className="player__score">{player.score}</div>
+                                    </>
+                                    : null}
                                 </Player>
                             )
                         })
@@ -54,11 +92,11 @@ export default function Final() {
                 </div>
                 <CustomButton 
                     customClass={`players-list__continue background_green size_md color_white
-                    ${gameFinished ? '' : ' custom-button_disabled'}
+                    ${selected ? '' : ' custom-button_disabled'}
                     `} 
                     text="Следующий круг" 
                     onClick={handleSubmit} 
-                    disabled={gameFinished ? false : true}
+                    disabled={selected ? false : true}
                 />
             </Wrapper>
         )

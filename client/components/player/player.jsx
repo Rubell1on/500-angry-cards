@@ -9,7 +9,7 @@ export default function Player({userId, customclass, name, children, onClick = (
 
     return (
         <div className={`player${customclass ? ` ${customclass}` : ''}`} onClick={handleClick}>
-            <div className="player__name">{name}</div>
+            {name ? <div className="player__name">{name}</div> : null}
             {children}
         </div>
     )
