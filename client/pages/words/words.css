@@ -1,0 +1,15 @@
+.players-list {
+    margin-bottom: 10px;
+}
+
+.players-list > div {
+    margin-bottom: 5px;
+}
+
+.players-list > div:last-child {
+    margin-bottom: 0px;
+}
+
+.players-list__continue {
+    margin: 0 auto;
+}

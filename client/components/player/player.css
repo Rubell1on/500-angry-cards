@@ -6,6 +6,10 @@
     border-radius: 5px;
 }
 
+.player_background_green {
+    background: #7ac17a;
+}
+
 .player__name {
     width: calc(100% - 30px);
     line-height: 30px;

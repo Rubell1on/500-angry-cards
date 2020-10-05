@@ -1,0 +1,12 @@
+.last-session__description {
+    margin-bottom: 10px;
+}
+
+.last-session__controls {
+    display: flex;
+    justify-content: center;
+}
+
+.last-session__controls > input:first-child {
+    margin-right: 5px;
+}
