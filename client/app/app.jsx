@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import './app.css';
 
@@ -10,17 +10,18 @@ import Words from '../pages/words/words.jsx';
 import Final from '../pages/final/final.jsx';
 import Winner from '../pages/winnner/winner.jsx';
 import Header from '../components/header/header.jsx';
+import Info from '../pages/info/info.jsx';
 
 const App = () => (
     <BrowserRouter>
         <Header />
         <Switch>
-            <Route path={'/info'} render={() => <h1>Hello info</h1>}/>
-            <Route path={'/winner/:id'} component={Winner}/>
-            <Route path={'/final'} component={Final}/>
-            <Route path={'/words'} component={Words}/>
-            <Route path={'/players'} component={Players}/>
-            <Route path={'/'} component={Index}/>
+            <Route exact path={'/info'} component={Info}/>
+            <Route exact path={'/winner/:id'} component={Winner}/>
+            <Route exact path={'/final'} component={Final}/>
+            <Route exact path={'/words'} component={Words}/>
+            <Route exact path={'/players'} component={Players}/>
+            <Route exact path={'/'} component={Index}/>
         </Switch>
     </BrowserRouter>
 )

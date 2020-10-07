@@ -13,3 +13,17 @@
 .players-list__continue {
     margin: 0 auto;
 }
+
+.words__header {
+    margin-bottom: 10px;
+}
+
+.error__header {
+    display: inline-block;
+    text-align: center;
+}
+
+.error__button {
+    display: inline-block;
+    border-radius: 10px;
+}

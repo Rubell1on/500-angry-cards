@@ -12,8 +12,8 @@ export default function LastSession({onYes, onNo}) {
             <Label className="last-session__header" text="Внимание!"/>
             <div className="last-session__description">Была найдена предыдущая сессия игры! Начать новую?</div>
             <div className="last-session__controls">
-                <CustomButton customClass="size_sm" onClick={onYes} text="Да"/>
-                <CustomButton customClass="size_sm" onClick={onNo} text="Нет"/>
+                <CustomButton customclass="size_sm" onClick={onYes} text="Да"/>
+                <CustomButton customclass="size_sm" onClick={onNo} text="Нет"/>
             </div>
         </CustomWindow>
     )

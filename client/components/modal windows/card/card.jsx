@@ -23,8 +23,8 @@ export default function Card({name = '', onClose = () => {}, onSubmit = () => {}
             </div>
             <form className="card__form" action="" onSubmit={handleSubmit}>
                 <label htmlFor="player-text">Введите текст</label>
-                <CustomInput id="player-text" customClass="card__input custom-input_width_100perc" onChange={handleInput} required/>
-                <CustomButton customClass="card__submit background_green color_white size_md" type="submit"/>
+                <CustomInput id="player-text" customclass="card__input custom-input_width_100perc" onChange={handleInput} required/>
+                <CustomButton customclass="card__submit background_green color_white size_md" type="submit"/>
             </form>
         </div>
     )

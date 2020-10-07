@@ -64,7 +64,7 @@ export default function Final() {
 
         return (
             <Wrapper>
-                <Label text="Стадия выбора" />
+                <Label customclass="final__header" text="Выбор" />
                 <div className="players-list">
                     {
                         tempAnswers.map(p => {
@@ -91,7 +91,7 @@ export default function Final() {
                     }
                 </div>
                 <CustomButton 
-                    customClass={`players-list__continue background_green size_md color_white
+                    customclass={`players-list__continue background_green size_md color_white
                     ${selected ? '' : ' custom-button_disabled'}
                     `} 
                     text="Следующий круг" 

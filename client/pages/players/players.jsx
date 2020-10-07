@@ -44,8 +44,8 @@ export default function Players() {
     }
 
     return (
-        <Wrapper customClass="players">
-            <Label className="players__header" text="Игроки" />
+        <Wrapper customclass="players">
+            <Label customclass="players__header" text="Игроки" />
             {
                 playersList.length > 0
                 ? <div>Кол-во игроков: {playersList.length}</div>
@@ -57,7 +57,7 @@ export default function Players() {
                     ? playersList.map(p => {
                             return (
                                 <Player customclass="player_justify_between" key={p.id} name={p.name}>
-                                    <CustomButton customClass="player__remove color_white background_red size_sm" onClick={() => removePlayer(p.id)} text="-"/>
+                                    <CustomButton customclass="player__remove color_white background_red size_sm" onClick={() => removePlayer(p.id)} text="-"/>
                                 </Player>
                             )
                         })
@@ -65,11 +65,11 @@ export default function Players() {
                 }
             </div>
             <form className="player-form" action="" onSubmit={addPlayer}>
-                <CustomInput customClass="player-form__username" style={{width: 'calc(100% - 35px)'}} type="text" placeholder="Введите имя" onChange={handleInput} required/>
-                <CustomButton customClass="player-form__submit color_white background_green size_sm" style={{marginRight: '5px', marginLeft: '5px'}} type="submit" text="+"/>
+                <CustomInput customclass="player-form__username" style={{width: 'calc(100% - 35px)'}} type="text" placeholder="Введите имя" onChange={handleInput} required/>
+                <CustomButton customclass="player-form__submit color_white background_green size_sm" style={{marginRight: '5px', marginLeft: '5px'}} type="submit" text="+"/>
             </form>
             <CustomButton 
-                customClass={`players__finish size_md background_green color_white${playersList.length < 3 ? ' custom-button_disabled' : ''}`} 
+                customclass={`players__finish size_md background_green color_white${playersList.length < 3 ? ' custom-button_disabled' : ''}`} 
                 text="Дальше"
                 onClick={handleSubmit}
                 disabled={playersList.length < 3 ? true : false}

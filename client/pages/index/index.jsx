@@ -32,11 +32,11 @@ const Index = function() {
     return (
         <>
         {isSessionStarted ? <LastSession onYes={handleYes} onNo={handleNo}/> : null}
-        <Wrapper customClass="index__wrapper">
+        <Wrapper customclass="index__wrapper">
             <div className="index__logo">
                 <div className="logo__number">500</div>
                 <div className="logo__text">злобных карт</div>
-                <div className="logo__info">Клиент для записи своих<br/> безумных вариантов ответов</div>
+                <div className="logo__info">Веб-клиент для кастомной версии игры</div>
             </div>
             <div className="index__start-button" onClick={handleStart}>Начать</div>
         </Wrapper>

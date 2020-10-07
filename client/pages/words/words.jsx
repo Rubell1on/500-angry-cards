@@ -6,7 +6,7 @@ import Card from '../../components/modal windows/card/card.jsx';
 import CustomButton from '../../components/custom-button/custom-button.jsx';
 
 import './words.css';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 
 export default function Words() {
     let playersList;
@@ -71,7 +71,7 @@ export default function Words() {
                     : null
                 }
                 <Wrapper>
-                    <Label text="Стадия импровизации" />
+                    <Label customclass="words__header" text="Слова" />
                     <div className="players-list">
                         {
                             playersList.map(p => {
@@ -83,14 +83,20 @@ export default function Words() {
                             })
                         }
                     </div>
-                    <CustomButton customClass={`players-list__continue background_green size_md color_white${playerAnswers.length > 1 ? '' : ' custom-button_disabled'}`} text="Финалочка" onClick={handleSubmit} disabled={playerAnswers.length > 1 ? false : true}/>
+                    <CustomButton customclass={`players-list__continue background_green size_md color_white${playerAnswers.length > 1 ? '' : ' custom-button_disabled'}`} text="Финалочка" onClick={handleSubmit} disabled={playerAnswers.length > 1 ? false : true}/>
                 </Wrapper>
             </>
         )
     } else {
         return (
-            <Wrapper>
-                <Label text="Прежде чем играть необходимо ввести имена игроков!"/>
+            <Wrapper customclass="error">
+                {/* <Label customclass="error__header">
+                    Прежде чем начать необходимо <CustomButton customclass="error__button size_md background_red color_white" text="добавить!"/> игроков!
+                </Label> */}
+                <Label customclass="error__header">
+                    Прежде чем начать необходимо <Link className="error__button size_md background_red color_white" to="/players">добавить</Link> игроков!
+                </Label>
+                
             </Wrapper>
         )
     }
