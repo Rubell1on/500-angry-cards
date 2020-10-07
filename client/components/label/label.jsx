@@ -2,8 +2,8 @@ import React from 'react';
 
 import './label.css';
 
-export default function Label({text}) {
+export default function Label({text, customclass}) {
     return (
-        <div className="label">{text}</div>
+        <div className={`label${customclass ? ` ${customclass}` : ''}`}>{text}</div>
     )
 }

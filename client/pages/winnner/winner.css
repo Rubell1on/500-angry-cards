@@ -1,0 +1,7 @@
+.winner > * {
+    text-align: center;
+}
+
+.winner-window__restart {
+    margin: 0 auto;
+}

@@ -56,7 +56,7 @@ export default function Players() {
                     playersList.length > 0 
                     ? playersList.map(p => {
                             return (
-                                <Player key={p.id} name={p.name}>
+                                <Player customclass="player_justify_between" key={p.id} name={p.name}>
                                     <CustomButton customClass="player__remove color_white background_red size_sm" onClick={() => removePlayer(p.id)} text="-"/>
                                 </Player>
                             )

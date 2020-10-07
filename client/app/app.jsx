@@ -9,13 +9,11 @@ import Players from '../pages/players/players.jsx';
 import Words from '../pages/words/words.jsx';
 import Final from '../pages/final/final.jsx';
 import Winner from '../pages/winnner/winner.jsx';
+import Header from '../components/header/header.jsx';
 
 const App = () => (
     <BrowserRouter>
-        <div className="header">
-            <Link to={'/'}>Главная</Link>
-            <Link to={'/info'}>Инфо</Link>
-        </div>
+        <Header />
         <Switch>
             <Route path={'/info'} render={() => <h1>Hello info</h1>}/>
             <Route path={'/winner/:id'} component={Winner}/>

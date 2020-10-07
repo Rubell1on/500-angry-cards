@@ -10,6 +10,10 @@
     background: #7ac17a;
 }
 
+.player_justify_between {
+    justify-content: space-between;
+}
+
 .player__name {
     width: calc(100% - 30px);
     line-height: 30px;
