@@ -2,11 +2,11 @@
   "name": "500angrycards",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
-    "watch": "webpack --watch --mode development"
+    "watch": "webpack --watch --mode development",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
