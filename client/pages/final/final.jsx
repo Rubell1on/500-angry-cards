@@ -81,7 +81,7 @@ export default function Final() {
                                     {
                                     selected 
                                     ? <>
-                                        <div className="player__name player__name_short player__name_height_fit">{player.name}</div>
+                                        <div className="player__name player__name_short player__name_height_fit player__text_bold">{player.name}</div>
                                         <div className="player__answer player__answer_short">{p.text}</div>
                                         <div className="player__score">{player.score}</div>
                                     </>

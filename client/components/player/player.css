@@ -22,10 +22,13 @@
     text-overflow: ellipsis;
 }
 
+.player__text_bold {
+    font-weight: bold;
+}
+
 .player__name_short {
     width: 80px;
     word-wrap: break-word;
-    line-height: unset;
 }
 
 .player__height_fit {
