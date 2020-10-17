@@ -17,4 +17,27 @@
 .player__name {
     width: calc(100% - 30px);
     line-height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.player__name_short {
+    width: 80px;
+    word-wrap: break-word;
+    line-height: unset;
+}
+
+.player__height_fit {
+    height: fit-content;
+}
+
+.player__name_height_fit {
+    height: fit-content;
+}
+
+.player__answer_short {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

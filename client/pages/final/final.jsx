@@ -72,6 +72,7 @@ export default function Final() {
                             return (
                                 <Player 
                                     // customclass={checkText(p.id) ? 'player_background_green' : ''} 
+                                    customclass="player__height_fit"
                                     key={p.id} 
                                     userId={p.id} 
                                     name={selected ? '' : p.text} 
@@ -80,8 +81,8 @@ export default function Final() {
                                     {
                                     selected 
                                     ? <>
-                                        <div className="player__name">{player.name}</div>
-                                        <div className="player__answer">{p.text}</div>
+                                        <div className="player__name player__name_short player__name_height_fit">{player.name}</div>
+                                        <div className="player__answer player__answer_short">{p.text}</div>
                                         <div className="player__score">{player.score}</div>
                                     </>
                                     : null}
